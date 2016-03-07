@@ -81,7 +81,8 @@
     //将数据插入到资源数组中的目标位置上
     [numbers insertObject:objc atIndex:destinationIndexPath.item];
 }
-*/
+ */
+
 
 #pragma mark UICollectionViewDelegateFlowLayout
 // this will be called if our layout is UICollectionViewFlowLayout

@@ -43,7 +43,8 @@
 
   NSIndexPath *indexPath;
   NSInteger numSections = [self.collectionView numberOfSections];
-    //几组
+    
+  //几组 
   for(NSInteger section = 0; section < numSections; section++) {
     
       //每组几个item
