@@ -26,7 +26,9 @@
         [numbers addObject:[NSNumber numberWithInt:i]];
     }
     
-    /*  当改变UICollectionViewLayout的时候，内置动画过渡
+    
+    
+    /*  改变当前UICollectionView的 Layout的时候，动画过渡
     // We need to explicitly tell the collection view layout that we want the change animated.
     if (self.collectionView.collectionViewLayout == self.circleLayout)
     {
@@ -41,7 +43,15 @@
      */
     
     
-    /*手动创建
+    /*push到UICollectionViewController 可以如下初始化  过渡效果
+    SecondaryViewController *viewController = [[SecondaryViewController alloc] initWithCollectionViewLayout:[[AFSecondaryLayout alloc] init]];
+    viewController.useLayoutToLayoutNavigationTransitions = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
+    */
+    
+    
+    
+    /*手动创建 aaaa
     //创建一个layout布局类
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
     //设置布局方向为垂直流布局
@@ -74,6 +84,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   
   static NSString *CellIdentifier = @"IvanCell";
+    
   IvanPhotoCell *cell =
     [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier
                                               forIndexPath:indexPath];
