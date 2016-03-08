@@ -13,10 +13,15 @@
 		2C81AC241C8DA16900643DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C81AC221C8DA16900643DE4 /* LaunchScreen.storyboard */; };
 		2C81AC2F1C8DA16900643DE4 /* ConnectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81AC2E1C8DA16900643DE4 /* ConnectionViewTests.m */; };
 		2C81AC3A1C8DA16900643DE4 /* ConnectionViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81AC391C8DA16900643DE4 /* ConnectionViewUITests.m */; };
-		2C81AC4D1C8DA1A300643DE4 /* IvanPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81AC481C8DA1A300643DE4 /* IvanPhotoCell.m */; };
-		2C81AC4E1C8DA1A300643DE4 /* IvanViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81AC4A1C8DA1A300643DE4 /* IvanViewLayout.m */; };
-		2C81AC4F1C8DA1A300643DE4 /* IvanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81AC4C1C8DA1A300643DE4 /* IvanViewController.m */; };
-		2C81AC511C8DA1A900643DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C81AC501C8DA1A900643DE4 /* Main.storyboard */; };
+		2CE303551C8EA82600DF416F /* IvanPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3034F1C8EA82600DF416F /* IvanPhotoCell.m */; };
+		2CE303561C8EA82600DF416F /* IvanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE303511C8EA82600DF416F /* IvanViewController.m */; };
+		2CE303571C8EA82600DF416F /* IvanViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE303531C8EA82600DF416F /* IvanViewLayout.m */; };
+		2CE303581C8EA82600DF416F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE303541C8EA82600DF416F /* Main.storyboard */; };
+		2CE303601C8EA8C000DF416F /* IvanCoverPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3035B1C8EA8C000DF416F /* IvanCoverPhotoCell.m */; };
+		2CE303611C8EA8C000DF416F /* IvanCoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3035D1C8EA8C000DF416F /* IvanCoverFlowLayout.m */; };
+		2CE303621C8EA8C000DF416F /* IvanCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3035F1C8EA8C000DF416F /* IvanCoverViewController.m */; };
+		2CE303641C8EA92D00DF416F /* IvanCoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE303631C8EA92D00DF416F /* IvanCoverViewController.storyboard */; };
+		2CE303661C8EAAEC00DF416F /* Photos in Resources */ = {isa = PBXBuildFile; fileRef = 2CE303651C8EAAEC00DF416F /* Photos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,19 +49,27 @@
 		2C81AC201C8DA16900643DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C81AC231C8DA16900643DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C81AC251C8DA16900643DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C81AC2A1C8DA16900643DE4 /* ConnectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C81AC2A1C8DA16900643DE4 /* ConnectionView.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectionView.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C81AC2E1C8DA16900643DE4 /* ConnectionViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionViewTests.m; sourceTree = "<group>"; };
 		2C81AC301C8DA16900643DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C81AC351C8DA16900643DE4 /* ConnectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C81AC351C8DA16900643DE4 /* ConnectionView.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectionView.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C81AC391C8DA16900643DE4 /* ConnectionViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionViewUITests.m; sourceTree = "<group>"; };
 		2C81AC3B1C8DA16900643DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C81AC471C8DA1A300643DE4 /* IvanPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanPhotoCell.h; sourceTree = "<group>"; };
-		2C81AC481C8DA1A300643DE4 /* IvanPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanPhotoCell.m; sourceTree = "<group>"; };
-		2C81AC491C8DA1A300643DE4 /* IvanViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanViewLayout.h; sourceTree = "<group>"; };
-		2C81AC4A1C8DA1A300643DE4 /* IvanViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanViewLayout.m; sourceTree = "<group>"; };
-		2C81AC4B1C8DA1A300643DE4 /* IvanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanViewController.h; sourceTree = "<group>"; };
-		2C81AC4C1C8DA1A300643DE4 /* IvanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanViewController.m; sourceTree = "<group>"; };
-		2C81AC501C8DA1A900643DE4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2CE3034E1C8EA82600DF416F /* IvanPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanPhotoCell.h; sourceTree = "<group>"; };
+		2CE3034F1C8EA82600DF416F /* IvanPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanPhotoCell.m; sourceTree = "<group>"; };
+		2CE303501C8EA82600DF416F /* IvanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanViewController.h; sourceTree = "<group>"; };
+		2CE303511C8EA82600DF416F /* IvanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanViewController.m; sourceTree = "<group>"; };
+		2CE303521C8EA82600DF416F /* IvanViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanViewLayout.h; sourceTree = "<group>"; };
+		2CE303531C8EA82600DF416F /* IvanViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanViewLayout.m; sourceTree = "<group>"; };
+		2CE303541C8EA82600DF416F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2CE3035A1C8EA8C000DF416F /* IvanCoverPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanCoverPhotoCell.h; sourceTree = "<group>"; };
+		2CE3035B1C8EA8C000DF416F /* IvanCoverPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanCoverPhotoCell.m; sourceTree = "<group>"; };
+		2CE3035C1C8EA8C000DF416F /* IvanCoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanCoverFlowLayout.h; sourceTree = "<group>"; };
+		2CE3035D1C8EA8C000DF416F /* IvanCoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanCoverFlowLayout.m; sourceTree = "<group>"; };
+		2CE3035E1C8EA8C000DF416F /* IvanCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvanCoverViewController.h; sourceTree = "<group>"; };
+		2CE3035F1C8EA8C000DF416F /* IvanCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IvanCoverViewController.m; sourceTree = "<group>"; };
+		2CE303631C8EA92D00DF416F /* IvanCoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IvanCoverViewController.storyboard; sourceTree = "<group>"; };
+		2CE303651C8EAAEC00DF416F /* Photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Photos; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				2C81AC111C8DA16900643DE4 /* ConnectionView.app */,
-				2C81AC2A1C8DA16900643DE4 /* ConnectionViewTests.xctest */,
-				2C81AC351C8DA16900643DE4 /* ConnectionViewUITests.xctest */,
+				2C81AC2A1C8DA16900643DE4 /* ConnectionView.xctest */,
+				2C81AC351C8DA16900643DE4 /* ConnectionView.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,13 +122,8 @@
 			children = (
 				2C81AC171C8DA16900643DE4 /* AppDelegate.h */,
 				2C81AC181C8DA16900643DE4 /* AppDelegate.m */,
-				2C81AC501C8DA1A900643DE4 /* Main.storyboard */,
-				2C81AC471C8DA1A300643DE4 /* IvanPhotoCell.h */,
-				2C81AC481C8DA1A300643DE4 /* IvanPhotoCell.m */,
-				2C81AC491C8DA1A300643DE4 /* IvanViewLayout.h */,
-				2C81AC4A1C8DA1A300643DE4 /* IvanViewLayout.m */,
-				2C81AC4B1C8DA1A300643DE4 /* IvanViewController.h */,
-				2C81AC4C1C8DA1A300643DE4 /* IvanViewController.m */,
+				2CE3034D1C8EA82600DF416F /* WaterFlow */,
+				2CE303591C8EA84D00DF416F /* CoverFlow */,
 				2C81AC201C8DA16900643DE4 /* Assets.xcassets */,
 				2C81AC221C8DA16900643DE4 /* LaunchScreen.storyboard */,
 				2C81AC251C8DA16900643DE4 /* Info.plist */,
@@ -148,6 +156,35 @@
 				2C81AC3B1C8DA16900643DE4 /* Info.plist */,
 			);
 			path = ConnectionViewUITests;
+			sourceTree = "<group>";
+		};
+		2CE3034D1C8EA82600DF416F /* WaterFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2CE3034E1C8EA82600DF416F /* IvanPhotoCell.h */,
+				2CE3034F1C8EA82600DF416F /* IvanPhotoCell.m */,
+				2CE303521C8EA82600DF416F /* IvanViewLayout.h */,
+				2CE303531C8EA82600DF416F /* IvanViewLayout.m */,
+				2CE303501C8EA82600DF416F /* IvanViewController.h */,
+				2CE303511C8EA82600DF416F /* IvanViewController.m */,
+				2CE303541C8EA82600DF416F /* Main.storyboard */,
+			);
+			path = WaterFlow;
+			sourceTree = "<group>";
+		};
+		2CE303591C8EA84D00DF416F /* CoverFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2CE303651C8EAAEC00DF416F /* Photos */,
+				2CE3035A1C8EA8C000DF416F /* IvanCoverPhotoCell.h */,
+				2CE3035B1C8EA8C000DF416F /* IvanCoverPhotoCell.m */,
+				2CE3035C1C8EA8C000DF416F /* IvanCoverFlowLayout.h */,
+				2CE3035D1C8EA8C000DF416F /* IvanCoverFlowLayout.m */,
+				2CE3035E1C8EA8C000DF416F /* IvanCoverViewController.h */,
+				2CE3035F1C8EA8C000DF416F /* IvanCoverViewController.m */,
+				2CE303631C8EA92D00DF416F /* IvanCoverViewController.storyboard */,
+			);
+			path = CoverFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +222,7 @@
 			);
 			name = ConnectionViewTests;
 			productName = ConnectionViewTests;
-			productReference = 2C81AC2A1C8DA16900643DE4 /* ConnectionViewTests.xctest */;
+			productReference = 2C81AC2A1C8DA16900643DE4 /* ConnectionView.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2C81AC341C8DA16900643DE4 /* ConnectionViewUITests */ = {
@@ -203,7 +240,7 @@
 			);
 			name = ConnectionViewUITests;
 			productName = ConnectionViewUITests;
-			productReference = 2C81AC351C8DA16900643DE4 /* ConnectionViewUITests.xctest */;
+			productReference = 2C81AC351C8DA16900643DE4 /* ConnectionView.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -253,8 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C81AC511C8DA1A900643DE4 /* Main.storyboard in Resources */,
+				2CE303661C8EAAEC00DF416F /* Photos in Resources */,
+				2CE303581C8EA82600DF416F /* Main.storyboard in Resources */,
 				2C81AC241C8DA16900643DE4 /* LaunchScreen.storyboard in Resources */,
+				2CE303641C8EA92D00DF416F /* IvanCoverViewController.storyboard in Resources */,
 				2C81AC211C8DA16900643DE4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C81AC4F1C8DA1A300643DE4 /* IvanViewController.m in Sources */,
+				2CE303561C8EA82600DF416F /* IvanViewController.m in Sources */,
 				2C81AC191C8DA16900643DE4 /* AppDelegate.m in Sources */,
-				2C81AC4D1C8DA1A300643DE4 /* IvanPhotoCell.m in Sources */,
-				2C81AC4E1C8DA1A300643DE4 /* IvanViewLayout.m in Sources */,
+				2CE303571C8EA82600DF416F /* IvanViewLayout.m in Sources */,
+				2CE303611C8EA8C000DF416F /* IvanCoverFlowLayout.m in Sources */,
+				2CE303551C8EA82600DF416F /* IvanPhotoCell.m in Sources */,
+				2CE303601C8EA8C000DF416F /* IvanCoverPhotoCell.m in Sources */,
 				2C81AC161C8DA16900643DE4 /* main.m in Sources */,
+				2CE303621C8EA8C000DF416F /* IvanCoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +460,7 @@
 				INFOPLIST_FILE = ConnectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chinagps.csub.ConnectionView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConnectionView;
 			};
 			name = Debug;
 		};
@@ -429,7 +471,7 @@
 				INFOPLIST_FILE = ConnectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chinagps.csub.ConnectionView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConnectionView;
 			};
 			name = Release;
 		};
@@ -440,7 +482,7 @@
 				INFOPLIST_FILE = ConnectionViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chinagps.csub.ConnectionViewTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConnectionView;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectionView.app/ConnectionView";
 			};
 			name = Debug;
@@ -452,7 +494,7 @@
 				INFOPLIST_FILE = ConnectionViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chinagps.csub.ConnectionViewTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConnectionView;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectionView.app/ConnectionView";
 			};
 			name = Release;
@@ -463,7 +505,7 @@
 				INFOPLIST_FILE = ConnectionViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chinagps.csub.ConnectionViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConnectionView;
 				TEST_TARGET_NAME = ConnectionView;
 				USES_XCTRUNNER = YES;
 			};
@@ -475,7 +517,7 @@
 				INFOPLIST_FILE = ConnectionViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Chinagps.csub.ConnectionViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ConnectionView;
 				TEST_TARGET_NAME = ConnectionView;
 				USES_XCTRUNNER = YES;
 			};
@@ -500,6 +542,7 @@
 				2C81AC401C8DA16900643DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C81AC411C8DA16900643DE4 /* Build configuration list for PBXNativeTarget "ConnectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +551,7 @@
 				2C81AC431C8DA16900643DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C81AC441C8DA16900643DE4 /* Build configuration list for PBXNativeTarget "ConnectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +560,7 @@
 				2C81AC461C8DA16900643DE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

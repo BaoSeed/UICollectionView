@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ConnectionView.xcodeproj">
+      location = "self:/Users/Ivan/Desktop/UICollectionView./ConnectionView/ConnectionView.xcodeproj">
    </FileRef>
 </Workspace>

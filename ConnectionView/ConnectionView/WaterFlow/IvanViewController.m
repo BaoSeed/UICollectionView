@@ -26,14 +26,29 @@
         [numbers addObject:[NSNumber numberWithInt:i]];
     }
     
+    /*  当改变UICollectionViewLayout的时候，内置动画过渡
+    // We need to explicitly tell the collection view layout that we want the change animated.
+    if (self.collectionView.collectionViewLayout == self.circleLayout)
+    {
+        [self.flowLayout invalidateLayout];
+        [self.collectionView setCollectionViewLayout:self.flowLayout animated:YES];
+    }
+    else
+    {
+        [self.circleLayout invalidateLayout];
+        [self.collectionView setCollectionViewLayout:self.circleLayout animated:YES];
+    }
+     */
     
-    /*
+    
+    /*手动创建
     //创建一个layout布局类
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
     //设置布局方向为垂直流布局
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     //设置每个item的大小为100*100
     layout.itemSize = CGSizeMake(100, 100);
+     
     //创建collectionView 通过一个布局策略layout来创建
     UICollectionView * collect = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:layout];
     //代理设置
@@ -66,6 +81,24 @@
     
   return cell;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+ 
+    if(indexPath.item % 2 == 0){
+    
+       
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"IvanCoverViewController" bundle:[NSBundle mainBundle]];
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"IvanCoverViewController"];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+    
+    
+    }
+   
+}
+
+
 
 /*
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
