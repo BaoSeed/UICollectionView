@@ -68,7 +68,7 @@
        }
       CGFloat y = temp;
       CGFloat x = self.interItemSpacing + (self.interItemSpacing + itemWidth) * min;
-      CGFloat height =   [((id<IvanMasonryViewLayoutDelegate>)self.collectionView.delegate)
+      CGFloat height =   [((id<IvanViewLayoutDelegate>)self.collectionView.delegate)
                              collectionView:self.collectionView
                              layout:self
                              heightForItemAtIndexPath:indexPath];

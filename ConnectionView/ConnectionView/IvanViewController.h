@@ -10,6 +10,6 @@
 
 #import "IvanViewLayout.h"
 
-@interface IvanViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate, IvanMasonryViewLayoutDelegate, UICollectionViewDelegateFlowLayout>
+@interface IvanViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate, IvanViewLayoutDelegate, UICollectionViewDelegateFlowLayout>
 
 @end                                                        

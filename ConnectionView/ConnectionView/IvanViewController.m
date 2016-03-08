@@ -94,7 +94,7 @@
 
 
 
-#pragma mark IvanMasonryViewLayoutDelegate
+#pragma mark IvanViewLayoutDelegate
 // this will be called if our layout is IvanMasonryViewLayout
 - (CGFloat) collectionView:(UICollectionView*) collectionView
                     layout:(IvanViewLayout*) layout

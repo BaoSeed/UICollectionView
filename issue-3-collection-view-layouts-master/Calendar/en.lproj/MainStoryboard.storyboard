@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="qC4-jU-yJe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Calendar View Controller-->
+        <scene sceneID="Mzt-A7-0Kv">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="qC4-jU-yJe" customClass="CalendarViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="HzM-sA-zbh">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="TA8-2b-E1x" customClass="WeekCalendarLayout"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarEventCell" id="kn8-fe-zwX" customClass="CalendarEventCell">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ouo-z9-0Sf">
+                                            <rect key="frame" x="10" y="10" width="180" height="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="1" green="0.33549097420000001" blue="0.36447877270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ouo-z9-0Sf" secondAttribute="trailing" constant="10" id="KwN-Et-RQH"/>
+                                    <constraint firstItem="Ouo-z9-0Sf" firstAttribute="top" secondItem="kn8-fe-zwX" secondAttribute="top" constant="10" id="iQv-ON-32W"/>
+                                    <constraint firstItem="Ouo-z9-0Sf" firstAttribute="leading" secondItem="kn8-fe-zwX" secondAttribute="leading" constant="10" id="vzw-Pw-vnQ"/>
+                                </constraints>
+                                <size key="customSize" width="200" height="200"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="Ouo-z9-0Sf" id="vRf-kZ-P4e"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gzU-rS-0Nd" id="4tc-1t-3s2"/>
+                            <outlet property="delegate" destination="gzU-rS-0Nd" id="hFI-en-jvW"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wb3-9w-IBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gzU-rS-0Nd" customClass="CalendarDataSource"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="11"/>
+        </scene>
+    </scenes>
+</document>

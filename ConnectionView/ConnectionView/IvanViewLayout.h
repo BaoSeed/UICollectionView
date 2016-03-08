@@ -10,7 +10,7 @@
 
 @class IvanViewLayout;
 
-@protocol IvanMasonryViewLayoutDelegate <NSObject>
+@protocol IvanViewLayoutDelegate <NSObject>
 
 @required
 - (CGFloat) collectionView:(UICollectionView*) collectionView
@@ -26,6 +26,6 @@
 @property (nonatomic, assign) NSUInteger numberOfColumns;
 @property (nonatomic, assign) CGFloat interItemSpacing;
 
-@property (weak, nonatomic) IBOutlet id<IvanMasonryViewLayoutDelegate> delegate;
+@property (weak, nonatomic) IBOutlet id<IvanViewLayoutDelegate> delegate;
 
 @end
