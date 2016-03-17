@@ -30,14 +30,9 @@
     //几栏（几列）
   self.numberOfColumns = 3;
   self.interItemSpacing =   10.0;
-  
+
+    
  
-  CGFloat fullWidth = self.collectionView.frame.size.width;
-  CGFloat availableSpaceExcludingPadding = fullWidth - (self.interItemSpacing * (self.numberOfColumns + 1));
-    
-  CGFloat itemWidth = availableSpaceExcludingPadding / self.numberOfColumns;
-    
-    
   self.lastYValueForColumn = [NSMutableDictionary dictionary];
   self.layoutInfo = [NSMutableDictionary dictionary];
 
@@ -53,32 +48,11 @@
     for(NSInteger item = 0; item < numItems; item++){
         
       indexPath = [NSIndexPath indexPathForItem:item inSection:section];
+        // 获取indexPath位置cell对应的布局属性
+        UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:indexPath];
       
-      UICollectionViewLayoutAttributes *itemAttributes =
-      [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-      
-
-      CGFloat temp = [self.lastYValueForColumn[@0] doubleValue];
-      int min = 0;
-      for (int a = 1; a < self.numberOfColumns; a++) {
-            if (temp > [self.lastYValueForColumn[@(a)] doubleValue]) {
-                temp = [self.lastYValueForColumn[@(a)] doubleValue];
-                min = a;
-            }
-       }
-      CGFloat y = temp;
-      CGFloat x = self.interItemSpacing + (self.interItemSpacing + itemWidth) * min;
-      CGFloat height =   [((id<IvanViewLayoutDelegate>)self.collectionView.delegate)
-                             collectionView:self.collectionView
-                             layout:self
-                             heightForItemAtIndexPath:indexPath];
-        
-      itemAttributes.frame = CGRectMake(x, y, itemWidth, height);
-      y =  y +  height + self.interItemSpacing;
-      self.lastYValueForColumn[@(min)] = @(y);
-    
-      //保存itemAttributes数组，供layoutAttributesForElementsInRect使用
-      self.layoutInfo[indexPath] = itemAttributes;
+        //保存itemAttributes数组，供layoutAttributesForElementsInRect使用
+        self.layoutInfo[indexPath] = attrs;
     }
   }
 }
@@ -107,15 +81,49 @@
 
 
 // 当边界发生改变时，是否应该刷新布局。如果YES则在边界变化（一般是scroll到其他地方）时，将重新计算需要的布局信息。
-//- (BOOL)shouldInvalidateLayoutForBoundsChange{
+- (BOOL)shouldInvalidateLayoutForBoundsChange{
 
-  //  return YES;
-//}
-/*
+    return YES;
+}
+
+
 // 返回对应于indexPath的位置的cell的布局属性
 -(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
 
+    UICollectionViewLayoutAttributes *itemAttributes =
+    [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    
+    CGFloat fullWidth = self.collectionView.frame.size.width;
+    CGFloat availableSpaceExcludingPadding = fullWidth - (self.interItemSpacing * (self.numberOfColumns + 1));
+    CGFloat itemWidth = availableSpaceExcludingPadding / self.numberOfColumns;
+    
+    CGFloat temp = [self.lastYValueForColumn[@0] doubleValue];
+    int min = 0;
+    for (int a = 1; a < self.numberOfColumns; a++) {
+        if (temp > [self.lastYValueForColumn[@(a)] doubleValue]) {
+            temp = [self.lastYValueForColumn[@(a)] doubleValue];
+            min = a;
+        }
+    }
+    CGFloat y = temp;
+    CGFloat x = self.interItemSpacing + (self.interItemSpacing + itemWidth) * min;
+    
+    CGFloat height =   [(id<IvanViewLayoutDelegate>)self.collectionView.delegate
+                        collectionView:self.collectionView
+                        layout:self
+                        heightForItemAtIndexPath:indexPath];
+    
+    itemAttributes.frame = CGRectMake(x, y, itemWidth, height);
+    y =  y +  height + self.interItemSpacing;
+    self.lastYValueForColumn[@(min)] = @(y);
+    
+    //在这记录最高的更好
+
+    return itemAttributes;
 }
+
+
+/*
 //返回对应于indexPath的位置的追加视图的布局属性，如果没有追加视图可不重载
 -(UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
 
@@ -140,5 +148,25 @@
   
   return CGSizeMake(self.collectionView.frame.size.width, maxHeight);
 }
+
+
+/*
+- (UICollectionViewLayoutInvalidationContext *)invalidationContextForInteractivelyMovingItems:(NSArray<NSIndexPath *> *)targetIndexPaths withTargetPosition:(CGPoint)targetPosition previousIndexPaths:(NSArray<NSIndexPath *> *)previousIndexPaths previousPosition:(CGPoint)previousPosition NS_AVAILABLE_IOS(9_0){
+
+    UICollectionViewLayoutInvalidationContext  *context =
+    
+    [super invalidationContextForInteractivelyMovingItems:targetIndexPaths
+                                       withTargetPosition:targetPosition
+                                       previousIndexPaths:previousIndexPaths
+                                         previousPosition:previousPosition];
+    
+    UICollectionViewController *collectionViewVC = (UICollectionViewController *)(id<IvanViewLayoutDelegate>)self.collectionView.delegate;
+   
+    [collectionViewVC.collectionView moveItemAtIndexPath:previousIndexPaths[0] toIndexPath:targetIndexPaths[0]];
+
+    return context;
+}
+ */
+
 
 @end

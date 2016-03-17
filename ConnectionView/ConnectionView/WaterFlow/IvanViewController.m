@@ -109,13 +109,12 @@
    
 }
 
-
-
-/*
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
     //返回YES允许其item移动
     return YES;
 }
+
+
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
 
     //取出源item数据
@@ -125,11 +124,11 @@
     //将数据插入到资源数组中的目标位置上
     [numbers insertObject:objc atIndex:destinationIndexPath.item];
 }
- */
+
 
 
 #pragma mark UICollectionViewDelegateFlowLayout
-// this will be called if our layout is UICollectionViewFlowLayout
+ //this will be called if our layout is UICollectionViewFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
   
   CGFloat randomHeight = 100 + (arc4random() % 140);

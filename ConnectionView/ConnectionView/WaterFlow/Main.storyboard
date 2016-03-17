@@ -13,7 +13,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89742744269999997" green="0.24235137400000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="mw0-IQ-ZTy" customClass="IvanViewLayout"/>
+                        <collectionViewLayout key="collectionViewLayout" id="Qvs-yT-C72" customClass="IvanViewLayout"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IvanCell" id="63g-Ba-jgl" customClass="IvanPhotoCell">
                                 <rect key="frame" x="0.0" y="64" width="50" height="50"/>

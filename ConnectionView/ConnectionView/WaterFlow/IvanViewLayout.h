@@ -26,6 +26,6 @@
 @property (nonatomic, assign) NSUInteger numberOfColumns;
 @property (nonatomic, assign) CGFloat interItemSpacing;
 
-@property (weak, nonatomic) IBOutlet id<IvanViewLayoutDelegate> delegate;
+//@property (weak, nonatomic) IBOutlet id<IvanViewLayoutDelegate> delegate;
 
 @end
